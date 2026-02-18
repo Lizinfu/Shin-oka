@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reimu on 新新新新新新新丘城</title>
+    <link>http://localhost:1313/tags/reimu/</link>
+    <description>Recent content from 新新新新新新新丘城</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    
+    <managingEditor>1328362069@qq.com (Lizinfu)</managingEditor>
+    <webMaster>1328362069@qq.com (Lizinfu)</webMaster>
+    
+    <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
+    
+    <lastBuildDate>Sat, 28 Oct 2023 12:00:00 +0800</lastBuildDate>
+    
+    
+    <atom:link href="http://localhost:1313/tags/reimu/index.xml" rel="self" type="application/rss&#43;xml" />
+    
+
+    
+    
+
+    <item>
+      <title>test</title>
+      <link>http://localhost:1313/post/hello/</link>
+      <pubDate>Fri, 27 Oct 2023 10:00:00 &#43;0800</pubDate>
+      <author>1328362069@qq.com (Lizinfu)</author>
+      <guid>http://localhost:1313/post/hello/</guid>
+      <description>
+        <![CDATA[<h1>test</h1><p>作者：Lizinfu（1328362069@qq.com）</p>
+        
+          <p>💘 博麗 霊夢 💘</p>
+        
+        <hr><p>本文2023-10-27首发于<a href='http://localhost:1313/'>新新新新新新新丘城</a>，最后修改于2023-10-28</p>]]>
+      </description>
+      
+        <category>测试</category>
+      
+    </item>
+    
+  </channel>
+</rss>

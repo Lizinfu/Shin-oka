@@ -26,12 +26,12 @@ monthFormat: "2006-01"
 dateFormat: "2006-01-02"
 timeFormat: "2006-01-02 15:04:05"
 
-author: D-Sketon
-email: xxx@example.com
-description: "少女祈祷中..."
-subtitle: "少女祈祷中..."
+author: Lizinfu
+email: 1328362069@qq.com
+description: "欢迎随地大小便……嗯？"
+subtitle: "人道西迟好去处，不知此地在梦中。"
 
-banner: "images/banner.webp"
+banner: "images/banner.jpg"
 # You can also write it in the form of the following url
 # banner: "https://example.com"
 
@@ -84,10 +84,10 @@ copyright:
 #   All website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></div>
 
 footer:
-  since: 2020 # 2020-current year
+  since: 2026 # 2026-current year
   powered: true
-  count: true
-  busuanzi: true
+  count: false
+  busuanzi: false
   icon:
     url: "../images/taichi.png" # this path is relative to the css/main.css, so it needs to go up one level to reach the images folder
     rotate: true
@@ -102,8 +102,8 @@ sidebar:
     show_common: true # whether to show common sidebar, ignored on mobile devices
 
 social:
-  # email: mailto:xxx@gmail.com
-  # github: https://github.com/yourname
+  email: mailto:1328362069@qq.com
+  github: https://github.com/Lizinfu
   # google: https://plus.google.com/yourname
   # twitter: https://twitter.com/yourname
   # facebook: https://www.facebook.com/yourname
@@ -193,9 +193,11 @@ anchor_icon: # default use '#' icon, you can use a hexadecimal representation of
 reimu_cursor:
   enable: true
   cursor:
-    default: ../images/cursor/reimu-cursor-default.png  # this path is relative to the css/main.css, so it needs to go up one level to reach the images folder
-    pointer: ../images/cursor/reimu-cursor-pointer.png
-    text: ../images/cursor/reimu-cursor-text.png
+    default: ../images/cursor/tang1.png  # this path is relative to the css/main.css, so it needs to go up one level to reach the images folder
+    pointer: ../images/cursor/tang2.png
+    text: ../images/cursor/tang3.png
+    wait: ../images/cursor/tang4.png
+    not_allowed: ../images/cursor/tang5.png
 
 icon_font: 4552607_4k4bc36ef96
 
@@ -330,7 +332,7 @@ comment:
     zh-TW: 說些什麼吧！
     ja: コメントを残す
     pt-BR: Deixe um comentário
-  default: waline # default comment system, when you enable multiple comment systems
+  default: giscus # default comment system, when you enable multiple comment systems
 
 # valine comment system. https://valine.js.org
 # version 1.5.1
@@ -391,12 +393,12 @@ gitalk:
 
 # https://giscus.app/zh-CN
 giscus:
-  enable: false
-  repo:
-  repoId:
-  category:
-  categoryId:
-  mapping: mapping
+  enable: true
+  repo: "Lizinfu/Shin-oka"
+  repoId: "R_kgDORS1esw"
+  category: "Announcements"
+  categoryId: "DIC_kwDORS1es84C2tW3"
+  mapping: url
   strict: 0
   reactionsEnabled: 1
   emitMetadata: 0
@@ -593,7 +595,53 @@ injector:
   body_begin: # Inject code snippet right after <body>
   body_end: # Inject code snippet right before </body>
   sidebar_begin: # Inject code snippet right after <aside>
-  sidebar_end: # Inject code snippet right before </aside>
+  sidebar_end: | # Inject code snippet right before </aside>
+    <div class="widget-wrap" data-aos="fade-up">
+      <h3 class="widget-title">求签处</h3>
+      <div class="widget" style="text-align: center; padding: 20px;">
+        <div id="fortune-container">
+          <p id="fortune-res" style="font-size: 1.5rem; font-weight: bold; color: var(--red-1); margin-bottom: 10px;">试试手气？</p>
+          <p id="fortune-desc" style="font-size: 0.9rem; color: var(--highlight-comment); min-height: 3em;">点击下方按钮求签</p>
+          <button id="draw-btn" style="background: var(--red-1); color: white; border: none; padding: 8px 20px; border-radius: 20px; cursor: pointer; transition: 0.3s; margin-top: 10px;">
+            合手求签
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const fortunes = [
+          { res: "大吉", desc: "那就祝你马年大吉吧！" },
+          { res: "中吉", desc: "要不出门逛逛吧？……如果没下雨的话。" },
+          { res: "小吉", desc: "要不要去抽个卡？" },
+          { res: "末吉", desc: "喝水的时候当心一些哦。" },
+          { res: "凶", desc: "宜摆烂。" },
+          { res: "大凶", desc: "呃，这个，那个……这个不算！我们重抽一下吧！" }
+        ];
+
+        function draw() {
+          const btn = document.getElementById('draw-btn');
+          const resText = document.getElementById('fortune-res');
+          const descText = document.getElementById('fortune-desc');
+          
+          btn.disabled = true;
+          resText.innerText = "正在摇晃签筒...";
+          descText.innerText = "偷瞄你一眼。";
+
+          setTimeout(() => {
+            const result = fortunes[Math.floor(Math.random() * fortunes.length)];
+            resText.innerText = "【" + result.res + "】";
+            descText.innerText = result.desc;
+            btn.disabled = false;
+          }, 800);
+        }
+
+        document.getElementById('draw-btn').addEventListener('click', draw);
+      })();
+    </script>
+
+  
 
 # Experimental, may have a lot of bugs, open with caution!
 pjax:
@@ -679,7 +727,7 @@ material_theme:
   # more information: https://github.com/2061360308/material-theme
   # notice: when you enable this feature, all the covers will be automatically added "crossorigin" attribute to support the dynamic color scheme
   # so make sure your custom covers will not be blocked by the browser's CORS policy
-  enable: false # enable material_theme to generate dynamic color schemes based on the banner image
+  enable: true # enable material_theme to generate dynamic color schemes based on the banner image
 
 internal_theme:
   light:
