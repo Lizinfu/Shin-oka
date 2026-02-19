@@ -694,8 +694,8 @@ player:
       audio: 
         - name: 星降る海
           artist: Aqu3ra,早見沙織
-          url: '/music/kaguya.mp3'
-          cover: '/music/kaguya.jpg'
+          url: 'music/kaguya.mp3'
+          cover: 'music/kaguya.jpg'
       fixed: true
       autoplay: false
       mini: true
