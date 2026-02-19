@@ -696,6 +696,7 @@ player:
           artist: Aqu3ra,早見沙織
           url: 'music/kaguya.mp3'
           cover: 'music/kaguya.jpg'
+          lrc: 'music/kaguya.lrc'
       fixed: true
       autoplay: false
       mini: true
