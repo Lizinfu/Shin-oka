@@ -29,7 +29,7 @@ math: true                           # 开启数学公式渲染 (KaTeX/MathJax)
 mermaid: true                        # 开启 Mermaid 流程图支持
 photos:                              # 开启文章照片墙（显示在文末）
   # - "https://img1.com/1.jpg"
-  - "/images/fereren.png"
+  - "images/fereren.png"
 
 # --- 版权与激励 ---
 copyright: false                     # 开启文章底部版权声明卡片
