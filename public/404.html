@@ -88,7 +88,7 @@ data-theme-mode="auto"
       </a><a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
   </nav>
   <nav id="sub-nav" aria-label="Secondary navigation"></nav></div>
-<header id="header" aria-label="Site header"><picture></picture><img crossorigin="anonymous" fetchpriority="high" src="/images/banner.jpg" alt=""><div id="header-outer">
+<header id="header" aria-label="Site header"><picture><source media="(max-width: 479px)" srcset="/images/banner-600w.jpg"><source media="(max-width: 799px)" srcset="/images/banner-800w.jpg"><source media="(min-width: 800px)" srcset="/images/banner.jpg"><img crossorigin="anonymous" fetchpriority="high" src="/images/banner.jpg" alt=""></picture><img alt="" style="visibility: hidden;"><div id="header-outer">
     <div id="header-title"><a href="/" id="logo">
           <h1 data-aos="slide-up">4 0 4 (ﾟ⊿ﾟ)ﾂ</h1>
         </a><h2 id="subtitle-wrap" data-aos="slide-down">
@@ -152,7 +152,20 @@ data-theme-mode="auto"
     
     
     
-    integrity="sha384-xneY1WY8hOfUzswrE4CrYq35N4BdVcxqxwHPr9zawE/jMSCxD&#43;jAPU55x/jj3wlf" crossorigin="anonymous"></script><script src="/js/pjax.js"  ></script>
+    integrity="sha384-xneY1WY8hOfUzswrE4CrYq35N4BdVcxqxwHPr9zawE/jMSCxD&#43;jAPU55x/jj3wlf" crossorigin="anonymous"></script><script src="/js/pjax.js"  ></script><script
+    src="https://npm.webcache.cn/quicklink@3.0.1/dist/quicklink.umd.js"
+    
+    
+    
+    
+    integrity="sha384-caMDqvgav/HWdEYQU1QRRHMLleigpL1YHAG0m371DhzfL8rRzUyOb&#43;bEHtwlmYjD" crossorigin="anonymous"></script><script data-pjax>
+    window.quicklink?.listen({
+      timeout:  3000 ,
+      priority:  true ,
+      ignores: JSON.parse("[]")
+    });
+  </script>
+
 
 <div id="lazy-script">
   <div><script data-pjax>

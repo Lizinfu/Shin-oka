@@ -132,7 +132,7 @@
       </a><a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
   </nav>
   <nav id="sub-nav" aria-label="Secondary navigation"><a id="nav-rss-link" class="nav-icon" href="/index.xml" title="RSS 订阅" aria-label="RSS 订阅" target="_blank"></a></nav></div>
-<header id="header" aria-label="Site header"><picture></picture><img crossorigin="anonymous" fetchpriority="high" src="/images/banner.jpg" alt="新新新新新新新丘城"><div id="header-outer">
+<header id="header" aria-label="Site header"><picture><source media="(max-width: 479px)" srcset="/images/banner-600w.jpg"><source media="(max-width: 799px)" srcset="/images/banner-800w.jpg"><source media="(min-width: 800px)" srcset="/images/banner.jpg"><img crossorigin="anonymous" fetchpriority="high" src="/images/banner.jpg" alt="新新新新新新新丘城"></picture><img alt="新新新新新新新丘城" style="visibility: hidden;"><div id="header-outer">
     <div id="header-title"><span id="logo">
             <h1 data-aos="slide-up">新新新新新新新丘城</h1>
           </span><h2 id="subtitle-wrap" data-aos="slide-down"><span id="subtitle">人道西迟好去处，不知此地在梦中。</span></h2></div>
@@ -263,7 +263,11 @@
       }, 800);
     }
 
-    document.getElementById('draw-btn').addEventListener('click', draw);
+    document.addEventListener('click', function(e) {
+      if (e.target && e.target.id === 'draw-btn') {
+        draw(e.target);
+      }
+    });
   })();
 </script>
 </aside>
@@ -456,7 +460,20 @@
     
     
     
-    integrity="sha384-xneY1WY8hOfUzswrE4CrYq35N4BdVcxqxwHPr9zawE/jMSCxD&#43;jAPU55x/jj3wlf" crossorigin="anonymous"></script><script src="/js/pjax.js"  ></script>
+    integrity="sha384-xneY1WY8hOfUzswrE4CrYq35N4BdVcxqxwHPr9zawE/jMSCxD&#43;jAPU55x/jj3wlf" crossorigin="anonymous"></script><script src="/js/pjax.js"  ></script><script
+    src="https://npm.webcache.cn/quicklink@3.0.1/dist/quicklink.umd.js"
+    
+    
+    
+    
+    integrity="sha384-caMDqvgav/HWdEYQU1QRRHMLleigpL1YHAG0m371DhzfL8rRzUyOb&#43;bEHtwlmYjD" crossorigin="anonymous"></script><script data-pjax>
+    window.quicklink?.listen({
+      timeout:  3000 ,
+      priority:  true ,
+      ignores: JSON.parse("[]")
+    });
+  </script>
+
 
 <div id="lazy-script">
   <div><script data-pjax>

@@ -37,13 +37,13 @@ banner: "images/banner.jpg"
 
 # If you want to use the srcset attribute, please enable it
 banner_srcset:
-  enable: false
+  enable: true
   srcset:
-    - src: "images/banner-600w.webp"
+    - src: "images/banner-600w.jpg"
       media: "(max-width: 479px)"
-    - src: "images/banner-800w.webp"
+    - src: "images/banner-800w.jpg"
       media: "(max-width: 799px)"
-    - src: "images/banner.webp"
+    - src: "images/banner.jpg"
       media: "(min-width: 800px)"
 
 avatar: "avatar.webp"
@@ -640,7 +640,11 @@ injector:
           }, 800);
         }
 
-        document.getElementById('draw-btn').addEventListener('click', draw);
+        document.addEventListener('click', function(e) {
+          if (e.target && e.target.id === 'draw-btn') {
+            draw(e.target);
+          }
+        });
       })();
     </script>
 
@@ -653,7 +657,7 @@ pjax:
 # Experimental
 # https://github.com/GoogleChromeLabs/quicklink
 quicklink:
-  enable: false
+  enable: true
   # The `requestIdleCallback` timeout, in milliseconds.
   timeout: 3000
   # Whether or not the URLs within the options.el container should be treated as high priority.
